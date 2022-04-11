@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '01-bases';
+  numero:number =10;
+
+  agregar(){
+    this.numero = this.numero+1;
+  }
+
 }
+
