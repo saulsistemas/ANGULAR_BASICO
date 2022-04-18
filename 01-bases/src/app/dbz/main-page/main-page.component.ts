@@ -10,13 +10,23 @@ interface Personaje{
 })
 export class MainPageComponent  {
 
+  personajes:Array<Personaje> =[
+    {nombre:'Goku',poder:65645},
+    {nombre:'vegeta',poder:65645},
+  ];
   nuevo:Personaje ={
-    nombre: 'Bullma',
-    poder:121
+    nombre: '',
+    poder:0
   }
   agregar(){
+    if (this.nuevo.nombre.trim().length===0) {
+      return;
+    }
+    this.personajes.push(this.nuevo);
     console.log(this.nuevo);
-    
+    this.nuevo={nombre: '',
+    poder:0};
+    console.log(this.nuevo);
     
   }
 
