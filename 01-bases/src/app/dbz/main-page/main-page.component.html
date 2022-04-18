@@ -3,12 +3,14 @@
 
 <div class="row">
     <div class="col">
-        <h3>Personajes</h3>
+        <app-personajes [personajesHijo]="personajes">
+        </app-personajes>
+        <!-- <h3>Personajes</h3>
         <hr>
         <ul *ngFor="let item of personajes">
             <li>{{item.nombre}} -{{item.poder | number}}</li>
             
-        </ul>
+        </ul> -->
     </div>
     <div class="col">
         <h3>Agregar</h3>
