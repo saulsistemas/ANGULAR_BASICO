@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { HeoroesModule } from './heores/heroes.module';
 import { ContadorModule } from './contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ContadorModule } from './contador/contador.module';
   imports: [
     BrowserModule,
     HeoroesModule,
-    ContadorModule
+    ContadorModule,
+    DbzModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
