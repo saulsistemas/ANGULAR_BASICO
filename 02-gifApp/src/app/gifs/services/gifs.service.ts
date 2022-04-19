@@ -8,8 +8,7 @@ export class GifsService {
 
   private apikey:string='fNel52976UIKB0L8EIiPKyONZNIKpKKg'
   private _historial:Array<string> = [];
-  private url:string="https://api.giphy.com/v1/stickers/search?api_key=fNel52976UIKB0L8EIiPKyONZNIKpKKg&q=dragon%20ball%20z&limit=10";
-
+  public resultados:Array<any> =[];
   get historial(){
     return [...this._historial];
   }
@@ -26,9 +25,10 @@ export class GifsService {
       //console.log(this._historial);
     }
 
-    this._http.get(this.url).subscribe((response:any)=>{
-      console.log(response.data);
-      
+    this._http.get(`https://api.giphy.com/v1/stickers/search?api_key=fNel52976UIKB0L8EIiPKyONZNIKpKKg&q=${query}&limit=10`)
+    .subscribe((response:any)=>{
+        this.resultados = response.data;
+        console.log(this.resultados);
     })
     
   }
