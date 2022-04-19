@@ -12,8 +12,12 @@ export class GifsService {
   }
 
   buscarGifs(query:string){
-    this._historial.unshift(query);
-    console.log(this._historial);
+    query= query.trim().toLocaleLowerCase();//LO QUE VIENE QUITAR ESPACIOS CONVERTIRLO A NINUSCULA
+    if (!this._historial.includes(query)) {//PARA NO VOLVER A BUSCAR
+      this._historial.unshift(query);
+      this._historial = this._historial.splice(0,10);
+      console.log(this._historial);
+    }
     
   }
 }
