@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PaisService } from '../../services/pais.service';
+import { Country } from '../../interfaces/paist.interfaces';
 
 @Component({
   selector: 'app-por-pais',
@@ -15,8 +16,8 @@ export class PorPaisComponent  {
 
  buscar(){
    this.hayError = false;
-   this._paisService.buscarPais(this.termino).subscribe(res=>{
-     console.log(res);
+   this._paisService.buscarPais(this.termino).subscribe((paises)=>{
+     console.log(paises);
    },
    (err)=>{
      this.hayError = true;
