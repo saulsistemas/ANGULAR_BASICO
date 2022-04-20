@@ -12,16 +12,20 @@ export class PorPaisComponent  {
 
   termino:string="";
   hayError:boolean = false;
+  paises: Country[]=[];
   constructor(private _paisService:PaisService) { }
 
  buscar(){
    this.hayError = false;
    this._paisService.buscarPais(this.termino).subscribe((paises)=>{
+     this.paises = paises;
      console.log(paises);
+     
    },
    (err)=>{
      this.hayError = true;
      console.log(err);
+     this.paises=[];
    }
    )
    
