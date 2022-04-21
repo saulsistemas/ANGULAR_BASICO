@@ -3,6 +3,7 @@
 <div class="row">
     <app-pais-input
         (onEnter)="buscar($event)"
+        (onDebounce)="sugerencias($event)"
     >
 
     </app-pais-input>
