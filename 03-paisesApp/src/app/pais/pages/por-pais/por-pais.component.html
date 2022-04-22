@@ -9,6 +9,13 @@
 
     </app-pais-input>
 </div>
+<ul class="list-group" *ngFor="let pais of paisesSugeridos">
+    <li class="list-group-item list-group-item-action">
+        <a [routerLink]="['/pais',pais.altSpellings[0]]">{{pais.name.common}}</a>
+        
+    </li>
+</ul>
+
 <hr>
 <div class="alert alert-danger" *ngIf="hayError">
     no se encontro nad con el termino {{termino}}
