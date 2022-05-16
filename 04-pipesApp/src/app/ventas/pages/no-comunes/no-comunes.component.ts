@@ -11,15 +11,23 @@ export class NoComunesComponent  {
 
   nombre:string = "Saul";
   genero:string="masculino";
-
+  valor:boolean=false;
   invitacionMap={
     'masculino':'inviarlo',
     'femenino':'inviarla',
 
   }
   cambiarCliente(){
-    this.nombre="melisa";
-    this.genero='femenino';
+    if (this.valor) {
+      this.valor=false;
+      this.nombre="Saul";
+      this.genero='masculino';
+    }else{
+      this.valor=true;
+      this.nombre="melisa";
+      this.genero='femenino';
+    }
+   
   }
   //i18nPlural
   clientes:Array<string>=['maria','pedro','carlos','miguel'];
