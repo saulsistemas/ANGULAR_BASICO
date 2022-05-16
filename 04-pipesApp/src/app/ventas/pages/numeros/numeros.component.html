@@ -9,4 +9,14 @@
             {{ventasNetas |number:'1.2-2'}}
         </p-card>
     </div>
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="Ventas Brutas" subheader="del Presente año">
+            {{(ventasNetas+2000000) |currency:'CAD':'symbol-narrow':'1.4-4'}}
+        </p-card>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4">
+        <p-card header="Ganacia Porcentrual" subheader="del Presente año">
+            {{porcentaje|percent:'2.2-2'}}
+        </p-card>
+    </div>
 </div>
