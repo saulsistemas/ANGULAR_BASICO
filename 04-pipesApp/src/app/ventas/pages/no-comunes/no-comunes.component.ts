@@ -50,4 +50,10 @@ export class NoComunesComponent  {
     edad:28,
     direccion:'mz klt1'
   }
+
+  heroes=[
+    {nombre:'supersaul',vuela:true},
+    {nombre:'robin',value:false},
+    {nombre:'acuaman',value:false},
+  ]
 }
