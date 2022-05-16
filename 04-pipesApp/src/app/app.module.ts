@@ -1,6 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRouterModule } from './app-router.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
@@ -21,7 +22,8 @@ registerLocaleData(localFra);
     BrowserModule,
     SharedModule,
     AppRouterModule,
-    VentasModule
+    VentasModule,
+    BrowserAnimationsModule
   ],
   providers: [{provide:LOCALE_ID,useValue:'es-PE' }],
   bootstrap: [AppComponent]
