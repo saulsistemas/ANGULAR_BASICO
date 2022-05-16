@@ -17,4 +17,13 @@ export class NoComunesComponent  {
     'femenino':'inviarla',
 
   }
+
+  //i18nPlural
+  clientes:Array<string>=['maria','pedro','carlos','miguel'];
+  clienteMap={
+    '=0':'no tenemos ningun cliente esperando',
+    '=1':'Tenemos un cliente esperando',
+    '=2':'Tenemos dos clientes esperando',
+    'other':'tenemos # clientes esperando'
+  }
 }
