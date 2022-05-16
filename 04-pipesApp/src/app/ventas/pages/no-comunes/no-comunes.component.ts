@@ -41,4 +41,13 @@ export class NoComunesComponent  {
   EliminarCliente(){
     this.clientes.pop(); //ELIMINA EL ULTIMO ELEMENTO
   }
+
+
+  //key value
+
+  persona={
+    nombre:'Saul',
+    edad:28,
+    direccion:'mz klt1'
+  }
 }
