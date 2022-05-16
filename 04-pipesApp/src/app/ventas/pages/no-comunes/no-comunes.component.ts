@@ -17,7 +17,10 @@ export class NoComunesComponent  {
     'femenino':'inviarla',
 
   }
-
+  cambiarCliente(){
+    this.nombre="melisa";
+    this.genero='femenino';
+  }
   //i18nPlural
   clientes:Array<string>=['maria','pedro','carlos','miguel'];
   clienteMap={
@@ -25,5 +28,9 @@ export class NoComunesComponent  {
     '=1':'Tenemos un cliente esperando',
     '=2':'Tenemos dos clientes esperando',
     'other':'tenemos # clientes esperando'
+  }
+
+  EliminarCliente(){
+    this.clientes.pop(); //ELIMINA EL ULTIMO ELEMENTO
   }
 }
